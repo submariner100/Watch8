@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="12029"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Watch8_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label alignment="center" text="Safe Crack" id="ymA-SC-eba">
+                            <fontDescription key="font" type="system" pointSize="24"/>
+                        </label>
+                        <slider width="1" alignment="left" continuous="YES" value="50" maximum="100" steps="3" id="VYq-Gz-l5f"/>
+                        <button width="1" alignment="left" title="Next" id="A8a-ek-5zF">
+                            <connections>
+                                <action selector="nextTapped" destination="AgC-eL-Hgc" id="83o-m5-jri"/>
+                            </connections>
+                        </button>
+                        <timer alignment="center" id="PwL-sN-Rhm">
+                            <calendarUnit key="units" minute="YES" second="YES"/>
+                        </timer>
+                    </items>
+                    <connections>
+                        <outlet property="nextbutton" destination="A8a-ek-5zF" id="qYP-db-OJw"/>
+                        <outlet property="numbersLabel" destination="ymA-SC-eba" id="ovy-3M-PvZ"/>
+                        <outlet property="safeValue" destination="VYq-Gz-l5f" id="ZkE-Ml-Z3W"/>
+                        <outlet property="timer" destination="PwL-sN-Rhm" id="IHE-BH-xIL"/>
+                    </connections>
+                </controller>
+            </objects>
+        </scene>
+    </scenes>
+</document>
